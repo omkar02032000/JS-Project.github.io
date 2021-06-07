@@ -3,7 +3,7 @@ var c = canvas.getContext("2d");
 
 //Method - 2 (right method)
 
-var MAX_SIZE = 5; //54
+var MAX_SIZE = 54; //5
 var x = 5;
 var y = 0;
 var MIN_HEIGHT = 30;
