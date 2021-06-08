@@ -1,0 +1,8 @@
+var canvas = document.querySelector('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
+function clearCanvas(){
+	c.clearRect(0, 0, canvas.width, canvas.height);
+}
