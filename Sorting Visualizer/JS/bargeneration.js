@@ -1,7 +1,7 @@
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext("2d");
 
-var MAX_SIZE = 5; //54
+var MAX_SIZE = 54; //5
 var MIN_HEIGHT = 30;
 var gap = 5;
 var barArray = [];
