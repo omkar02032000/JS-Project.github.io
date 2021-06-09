@@ -18,6 +18,6 @@ function rebardraw(arr){
 	    	bardraw(arr);
 	    	y += 1;
 	    	resolve(y);
-		}, 30)
+		}, 20)
 	})
 }

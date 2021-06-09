@@ -1,6 +1,6 @@
-var FIXED_WIDTH = 30;
+var FIXED_WIDTH = 20;
 var GAP = 5;
-var MAX_SIZE = Math.ceil(canvas.width/(FIXED_WIDTH+GAP));
+var MAX_SIZE = Math.ceil(canvas.width/(FIXED_WIDTH+GAP))-1;
 var MIN_HEIGHT = 30;
 var BAR_ARRAY = [];
 
