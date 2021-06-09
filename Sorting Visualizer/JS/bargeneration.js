@@ -1,4 +1,4 @@
-var MAX_SIZE = 5; //54
+var MAX_SIZE = 54; //54
 var MIN_HEIGHT = 30;
 var FIXED_WIDTH = 20;
 var GAP = 5;
