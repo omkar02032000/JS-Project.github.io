@@ -1,24 +1,21 @@
-var delay = ( function() {
-    var timer = 0;
-    return function(callback, ms) {
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-})();
-
-function bardraw(){
-	for(var i=0; i < MAX_SIZE; i++){
+function bardraw(arr){
+	for(let i=0; i < MAX_SIZE; i++){
 
 		c.beginPath();
-		c.rect(barArray[i].x, barArray[i].y, barArray[i].width, barArray[i].height);//c.rect(x, y, width, height)
+		c.rect(arr[i].x, arr[i].y, arr[i].width, arr[i].height);//c.rect(x, y, width, height)
 		c.strokeStyle = "blue";
 		c.stroke();		
 	}
 }
 
-function rebardraw(){
-	delay(function(){
-	    c.clearRect(0, 0, canvas.width, canvas.height);
-	    bardraw();
-	}, 1000 );
+function rebardraw(arr){
+	return new Promise((resolve, reject) => {
+		let y = 0;
+		setTimeout(() => {
+			clearCanvas();
+	    	bardraw(arr);
+	    	y += 1;
+	    	resolve(y);
+		}, 100)
+	})
 }
