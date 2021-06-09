@@ -14,8 +14,8 @@ async function bubbleSort(arr){
 				arr[j+1].y = temp;
 
 			}
+			await rebardraw(arr);
 		}
-		await rebardraw(arr);
 	}	
 }
 
