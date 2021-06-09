@@ -1,23 +1,23 @@
 async function bubbleSort(arr){
-	for(let i=0, temp=0, tempbar = barArray; i<MAX_SIZE; i++){
+	for(let i=0, temp=0; i<MAX_SIZE-1; i++){
 
-		for(let j=0; j<MAX_SIZE; j++){
+		for(let j=0; j<MAX_SIZE-i-1; j++){
 
-			if(barArray[i].height < barArray[j].height){
+			if(arr[j].height > arr[j+1].height){
 
-				temp = barArray[i].height;
-				barArray[i].height = barArray[j].height;
-				barArray[j].height = temp;	
+				temp = arr[j].height;
+				arr[j].height = arr[j+1].height;
+				arr[j+1].height = temp;	
 
-				temp = barArray[i].y;
-				barArray[i].y = barArray[j].y;
-				barArray[j].y = temp;
+				temp = arr[j].y;
+				arr[j].y = arr[j+1].y;
+				arr[j+1].y = temp;
 
 			}
 		}
-		let res = await rebardraw(barArray);
+		let res = await rebardraw(arr);
 		console.log(res);
 	}	
 };
 
-bubbleSort(barArray);
+bubbleSort(BAR_ARRAY);
