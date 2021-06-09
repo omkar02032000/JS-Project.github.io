@@ -15,9 +15,8 @@ async function bubbleSort(arr){
 
 			}
 		}
-		let res = await rebardraw(arr);
-		console.log(res);
+		await rebardraw(arr);
 	}	
-};
+}
 
 bubbleSort(BAR_ARRAY);

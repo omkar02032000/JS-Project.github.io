@@ -2,9 +2,11 @@ function bardraw(arr){
 	for(let i=0; i < MAX_SIZE; i++){
 
 		c.beginPath();
-		c.rect(arr[i].x, arr[i].y, arr[i].width, arr[i].height);//c.rect(x, y, width, height)
-		c.strokeStyle = "blue";
-		c.stroke();		
+		//c.strokeStyle = "blue";
+		//c.rect(arr[i].x, arr[i].y, arr[i].width, arr[i].height);
+		//c.stroke();
+		c.fillStyle = "blue";
+		c.fillRect(arr[i].x, arr[i].y, arr[i].width, arr[i].height);//c.rect(x, y, width, height)
 	}
 }
 

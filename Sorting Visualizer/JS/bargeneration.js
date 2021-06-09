@@ -1,7 +1,7 @@
-var MAX_SIZE = 54; //5
-var MIN_HEIGHT = 30;
-var FIXED_WIDTH = 20;
+var FIXED_WIDTH = 30;
 var GAP = 5;
+var MAX_SIZE = Math.ceil(canvas.width/(FIXED_WIDTH+GAP));
+var MIN_HEIGHT = 30;
 var BAR_ARRAY = [];
 
 function RecBar(x, y, w, h){
@@ -13,7 +13,7 @@ function RecBar(x, y, w, h){
 
 for(let i=0, x=5, y=0, width=FIXED_WIDTH, height=0; i < MAX_SIZE; i++){
 	
-	height = Math.ceil(Math.random() * window.innerHeight);
+	height = Math.ceil(Math.random() * canvas.height);
 	if(height < MIN_HEIGHT)
 		height = MIN_HEIGHT;
 	y = canvas.height - height;
