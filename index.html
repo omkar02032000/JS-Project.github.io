@@ -6,23 +6,74 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>
-			Conway's Game of Life
+			Sorting Algorithm Visualizor
 		</title>
 
-		<link rel="stylesheet" href="Conways Game/CSS/mainstyle.css">
-		<link rel="stylesheet" href="Conways Game/CSS/otherelement.css">
-
+		<link rel="stylesheet" href="Sorting Visualizer/CSS/mainstyle.css">
+		<link rel="stylesheet" href="Sorting Visualizer/CSS/otherelement.css">
 
 	</head>
 	
-	<body>
-		
-		<canvas id="canv1"></canvas>
-		<script src="Conways Game/JS/canvasmanpulation.js"></script>
-		<script src="Conways Game/JS/otherfunction.js"></script>
-		<script src="Conways Game/JS/checkboard.js"></script>
+	<body class="VisualizationMainPage">
 
+		<div id="container" class="mydivs">
 
+			<div id="header" class="mydivs">
+				<h1>Sorting Algorithm Visualizor</h1>
+			</div>
+
+			<div id="mainContent" class="mydivs">
+				<div id="algoControlSection" class="mydivs">
+					<table id="AlgorithmSpecificControls" class="mytables">
+						<tr>
+							<td>
+								No of Bars: <select id="nob">
+									<option value="50">50</option>
+									<option value="75">75</option>
+									<option value="100">100</option>
+									<option value="125">125</option>
+									<option value="150">150</option>
+								</select>
+							</td>
+							<td>
+								Speed: <select id="spd">
+									<option value="0.5">0.5 X</option>
+									<option value="0.75">0.75 X</option>
+									<option value="1" selected>1 X</option>
+									<option value="1.5">1.5 X</option>
+									<option value="2">2 X</option>
+								</select>
+							</td>
+							<td>
+								<button id="bargenerate" onclick="generateBar()">GENERATE BARS</button>
+							</td>
+							<td>
+								<button id="sort" onclick="bubbleSort(BAR_ARRAY)" disabled="true">START SORTING</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<canvas id="canvas"></canvas>
+				<script src="Sorting Visualizer/JS/elements.js"></script>
+				<script src="Sorting Visualizer/JS/variables.js"></script>
+				
+				<script src="Sorting Visualizer/JS/functions.js"></script>
+				<script src="Sorting Visualizer/JS/sorting_functions.js"></script>
+
+				<div id="generalAnimationControlSection" class="mydivs">
+
+					<table id="GeneralAnimationControls" class="mytables"></table>
+
+				</div>
+
+			</div> <!-- mainContent -->
+
+			<div id="footer" class="mydivs">
+				
+			</div>
+			
+		</div> <!-- container -->
 
 	</body>
 
