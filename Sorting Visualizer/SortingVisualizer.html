@@ -6,17 +6,16 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>
-			Sorting Visualizor
+			Sorting Algorithm Visualizor
 		</title>
 
 		<link rel="stylesheet" href="Sorting Visualizer/CSS/mainstyle.css">
 		<link rel="stylesheet" href="Sorting Visualizer/CSS/otherelement.css">
 
-
 	</head>
 	
 	<body class="VisualizationMainPage">
-		
+
 		<div id="container" class="mydivs">
 
 			<div id="header" class="mydivs">
@@ -25,23 +24,47 @@
 
 			<div id="mainContent" class="mydivs">
 				<div id="algoControlSection" class="mydivs">
-					<!-- Table for buttons to control specific animation (insert/find/etc) -->
-					<!-- (filled in by javascript code specific to the animtion) -->
-					<table id="AlgorithmSpecificControls" class="mytables"></table>
+					<table id="AlgorithmSpecificControls" class="mytables">
+						<tr>
+							<td>
+								No of Bars: <select id="nob">
+									<option value="50">50</option>
+									<option value="75">75</option>
+									<option value="100">100</option>
+									<option value="125">125</option>
+									<option value="150">150</option>
+								</select>
+							</td>
+							<td>
+								Speed: <select id="spd">
+									<option value="0.5">0.5 X</option>
+									<option value="0.75">0.75 X</option>
+									<option value="1" selected>1 X</option>
+									<option value="1.5">1.5 X</option>
+									<option value="2">2 X</option>
+								</select>
+							</td>
+							<td>
+								<button id="bargenerate" onclick="generateBar()">GENERATE BARS</button>
+							</td>
+							<td>
+								<button id="sort" onclick="bubbleSort(BAR_ARRAY)" disabled="true">START SORTING</button>
+							</td>
+						</tr>
+					</table>
 				</div>
-					<!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
 
 				<canvas id="canvas"></canvas>
-				<script src="Sorting Visualizer/JS/canvasmanpulation.js"></script>
-				<script src="Sorting Visualizer/JS/otherfunction.js"></script>
-				<script src="Sorting Visualizer/JS/bargeneration.js"></script>
-				<script src="Sorting Visualizer/JS/sorting.js"></script>
+				<script src="Sorting Visualizer/JS/elements.js"></script>
+				<script src="Sorting Visualizer/JS/variables.js"></script>
+				
+				<script src="Sorting Visualizer/JS/functions.js"></script>
+				<script src="Sorting Visualizer/JS/sorting_functions.js"></script>
 
 				<div id="generalAnimationControlSection" class="mydivs">
-					<!-- Table for buttons to control general animation (play/pause/undo/etc) -->
-					<!-- (filled in by javascript code, specifically AnimationMain.js)  -->
 
 					<table id="GeneralAnimationControls" class="mytables"></table>
+
 				</div>
 
 			</div> <!-- mainContent -->
