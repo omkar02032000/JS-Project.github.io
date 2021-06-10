@@ -6,51 +6,23 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>
-			Sorting Visualizor
+			Conway's Game of Life
 		</title>
 
-		<link rel="stylesheet" href="Sorting Visualizer/CSS/mainstyle.css">
-		<link rel="stylesheet" href="Sorting Visualizer/CSS/otherelement.css">
+		<link rel="stylesheet" href="Conways Game/CSS/mainstyle.css">
+		<link rel="stylesheet" href="Conways Game/CSS/otherelement.css">
 
 
 	</head>
 	
-	<body class="VisualizationMainPage">
+	<body>
 		
-		<div id="container" class="mydivs">
+		<canvas id="canv1"></canvas>
+		<script src="Conways Game/JS/canvasmanpulation.js"></script>
+		<script src="Conways Game/JS/otherfunction.js"></script>
+		<script src="Conways Game/JS/checkboard.js"></script>
 
-			<div id="header" class="mydivs">
-				<h1>Sorting Algorithm Visualizor</h1>
-			</div>
 
-			<div id="mainContent" class="mydivs">
-				<div id="algoControlSection" class="mydivs">
-					<!-- Table for buttons to control specific animation (insert/find/etc) -->
-					<!-- (filled in by javascript code specific to the animtion) -->
-					<table id="AlgorithmSpecificControls" class="mytables"></table>
-				</div>
-					<!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
-
-				<canvas id="canvas"></canvas>
-				<script src="Sorting Visualizer/JS/canvasmanpulation.js"></script>
-				<script src="Sorting Visualizer/JS/otherfunction.js"></script>
-				<script src="Sorting Visualizer/JS/bargeneration.js"></script>
-				<script src="Sorting Visualizer/JS/sorting.js"></script>
-
-				<div id="generalAnimationControlSection" class="mydivs">
-					<!-- Table for buttons to control general animation (play/pause/undo/etc) -->
-					<!-- (filled in by javascript code, specifically AnimationMain.js)  -->
-
-					<table id="GeneralAnimationControls" class="mytables"></table>
-				</div>
-
-			</div> <!-- mainContent -->
-
-			<div id="footer" class="mydivs">
-				
-			</div>
-			
-		</div> <!-- container -->
 
 	</body>
 
